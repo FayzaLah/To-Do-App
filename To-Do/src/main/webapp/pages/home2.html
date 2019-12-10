@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="static/vendor/bootstrap/css/bootstrap.min.css">
+   
+    
+    <!-- Data Table -->
+     <link rel="stylesheet" href="static/vendor/datatables/dataTables.bootstrap4.css">
+  
+    
+    <title>To Do List</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">To-Do</a>
+    
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <!-- <a class="nav-link" href="#" data-toggle="modal" data-target="#ajaxModal" >Add Task</a>-->
+             <button   id="addTask"  class="btn btn-danger">task</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br> 
+
+
+
+ 
+ <div class="alert "> </div>
+ 
+<div class="modal fade" id="ajaxModel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"  id="modelHeading"></h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                   <input type="number"   id="id_task" name="id">
+                   <input id ="creationDate"  name="creationDate" class="form-control" type="date" >
+						
+						<div class="form-group">
+							<label for="name" class="col-sm-2 control-label">Name</label>
+							<div class="col-sm-12">
+								<input name="name"  id="name" class="form-control" type="text"
+									placeholder="Add task">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="dueDate" class="col-sm-2 control-label">Due
+								Date</label>
+							<div class="col-sm-12">
+								<input name="dueDate"  id="dueDate" class="form-control" type="date"
+									placeholder="Due date">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="description" class="col-sm-2 control-label">Note</label>
+							<div class="col-sm-12">
+								<textarea name="description"  id="description" class="form-control" rows="3"></textarea>
+							</div>
+						</div>
+
+						<div class="col-sm-offset-2 col-sm-10">
+                     <button type="submit" class="btn btn-primary"  id="saveTask"  value="create">Save changes </button>
+                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Modal 
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="taskForm">
+          <div class="form-group">
+            <label for="nameTask"></label>
+            <input id ="nameTask"  class="form-control" type="text" placeholder="Add task">
+          </div>
+          
+          <div class="form-group">
+            <label for="dueDate"></label>
+            <input id="dueDate" class="form-control" type="date" placeholder="Due date">
+          </div>  
+          
+          <div class="form-group">
+            <label for="notes">Example textarea</label>
+            <textarea id="notes" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"  id="saveTask">Save</button>
+      </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+-->
+
+
+<div class="container">
+<h3>Tasks 2</h3>
+  <br>
+   <div class="table-responsive">
+  <table id="example"  class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Creation date</th>
+            <th>Due date</th>
+            <th>Notes</th>
+             <th>Edit / Delete</th>
+        </tr>
+    </thead>
+    <tfoot>
+       <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Creation date</th>
+            <th>Due date</th>
+            <th>Notes</th>
+            <th>Edit / Delete</th>
+        </tr>
+    </tfoot>
+</table>
+</div>
+</div>
+
+ <!-- Bootstrap core JavaScript-->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+  
+    <!-- DataTable -->
+  <script src="static/vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="static/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  
+  <script src="static/js/ajaxrequests.js"></script>
+ 
+  </body>
+</html> 
